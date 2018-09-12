@@ -32,7 +32,7 @@ foreach ($cities as $city) {
 				if (
 					strtolower($vv['main']) == strtolower($check_for)
 					 && in_array(date("l", $v['dt']), $check_days)
-					  && ($only_night === false || (date('G',$v['dt']) >= 20 || date('G',$v['dt']) <= 9))
+					  && ($only_night === false || (date('G',$v['dt']) >= 21 || date('G',$v['dt']) <= 8))
 				) {
 					$moon = $moonClient->moon($v['dt']);
 					if ($moon['illumination'] <= $check_moon) {
