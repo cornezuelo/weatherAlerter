@@ -13,6 +13,7 @@
  */
 class OpenWeatherClient {	
 	private $endpoint = 'http://api.openweathermap.org/data/2.5/forecast';
+	private $APIKey;
 	
 	function __construct($APIKey) {
 		$this->APIKey = $APIKey;
@@ -36,7 +37,15 @@ class OpenWeatherClient {
 		return $this->endpoint;
 	}
 
+	function getAPIKey() {
+		return $this->APIKey;
+	}
+
 	function setEndpoint($endpoint) {
 		$this->endpoint = $endpoint;
+	}
+
+	function setAPIKey($APIKey) {
+		$this->APIKey = $APIKey;
 	}
 }
