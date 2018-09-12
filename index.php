@@ -6,10 +6,10 @@ date_default_timezone_set('UTC');
 //INCLUDES
 include 'config.php';
 include 'classes/OpenWeatherClient.php';
-include 'classes/MoonClient.php';
+include 'classes/BurningSoulClient.php';
 //CLASSES
 $openWeatherClient = new OpenWeatherClient($OpenWeatherAPIKey);
-$moonClient = new MoonClient();
+$burningSoulClient = new BurningSoulClient();
 ?>
 <html>
 <head>
@@ -34,7 +34,7 @@ foreach ($cities as $city) {
 					 && in_array(date("l", $v['dt']), $check_days)
 					  && ($only_night === false || (date('G',$v['dt']) >= 21 || date('G',$v['dt']) <= 8))
 				) {
-					$moon = $moonClient->moon($v['dt']);
+					$moon = $burningSoulClient->moon($v['dt']);
 					if ($moon['illumination'] <= $check_moon) {
 						$vv['moon_illumination'] = $moon['illumination'];												
 						$vv['clouds'] = $v['clouds']['all'];
