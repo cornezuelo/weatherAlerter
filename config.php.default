@@ -1,0 +1,11 @@
+<?php
+$pwd = 'abc1234.'; //Password for executing the script
+$OpenWeatherAPIKey = 'xxxxxxxxxxxxxxxxxxx'; //Your API key for the OpenWeather API
+$cities = ['A Coruña,es','Villagarcía,es','Malpica,es','Vilaxoán,es']; //Cities to search
+$check_for = 'clear'; //rain, clear, clouds, thunderstorm, snow, drizzle, atmosphere (mist,smoke,haze,fog...)
+$check_moon = 15; //check for moon ilumination less than
+$check_clouds = 30; //check for clouds less than
+$check_days = ['Friday','Saturday','Sunday']; //Only those days matter
+$only_night = true; //Check only nights (Between 21 and 8)
+$mailFrom = 'admin@domain.com'; //Sender of the mail
+$mailTo = 'your@mail.com'; //Receiver of the mail
