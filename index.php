@@ -72,11 +72,10 @@ if (isset($_REQUEST['mail']) && $_REQUEST['mail'] == 1) {
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 	// More headers
-	$headers .= 'From: <admin@v0id.tech>' . "\r\n";	
+	$headers .= 'From: <'.$mailFrom.'>' . "\r\n";	
 
-	mail('emeeseka01@gmail.com','TIEMPO PA FOTINGOS',$html,$headers);
+	mail($mailTo,$mailTitle,$html,$headers);
 }
-send_mail($html);
 echo $html;
 ?>
 </body>
