@@ -10,3 +10,4 @@ $only_night = true; //Check only nights (Between 21 and 8)
 $mailFrom = 'admin@domain.com'; //Sender of the mail
 $mailTo = 'your@mail.com'; //Receiver of the mail
 $mailTitle = 'WEATHER REPORT FROM '.date('Y-m-d H:i:s'); //Title of the mail
+$moonApi = 0; //1 = api, 0=class
